@@ -207,3 +207,131 @@ nothing to commit, working tree clean
 PS C:\Users\gentil\gym-git-exercise> git stash list
 PS C:\Users\gentil\gym-git-exercise> 
 ```
+### Bundle 3
+
+## Exercise 1
+
+```powershell
+PS C:\Users\gentil\gym-git-exercise> git branch ft/team-page
+PS C:\Users\gentil\gym-git-exercise> git switch ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\gentil\gym-git-exercise> git status
+On branch ft/team-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+PS C:\Users\gentil\gym-git-exercise> git commit -a -m "team page is created"
+[ft/team-page 14fc204] team page is created
+ 1 file changed, 40 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\gentil\gym-git-exercise> git push origin ft/team-page
+Enumerating objects: 4, done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 728 bytes | 242.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+ * [new branch]      ft/team-page -> ft/team-page
+PS C:\Users\gentil\gym-git-exercise> git push
+To push the current branch and set the remote as upstream, use
+
+
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Everything up-to-date
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+PS C:\Users\gentil\gym-git-exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\gentil\gym-git-exercise> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS C:\Users\gentil\gym-git-exercise> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+PS C:\Users\gentil\gym-git-exercise> git log
+commit 14fc204b1d38d9aff2abdfe07c5ac3575afac732 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: ishimwe-gentil <igentilherve@gmail.com>
+Date:   Tue May 23 15:10:05 2023 +0200
+
+    team page is created
+
+commit 13d76f3a979ce1b8dc23e45ff1f661eb42dc927f (origin/main, main, ft/contact-page)
+Author: ishimwe-gentil <igentilherve@gmail.com>
+Date:   Mon May 22 23:58:28 2023 +0200
+
+    Exercise 2 solutions
+
+Author: ishimwe-gentil <igentilherve@gmail.com>
+
+
+commit 0a294f0a44beb19e7434ea82cc386aeda8288161
+Author: ishimwe-gentil <igentilherve@gmail.com>
+Date:   Mon May 22 14:30:17 2023 +0200
+    init project
+PS C:\Users\gentil\gym-git-exercise> git checkout ft/contact-page
+PS C:\Users\gentil\gym-git-exercise> git cherry-pick 1J5efcXgg1uCwNZVgsWkeotJKEQAYBujwE
+fatal: bad revision '1J5efcXgg1uCwNZVgsWkeotJKEQAYBujwE'
+PS C:\Users\gentil\gym-git-exercise> git cherry-pick 14fc204b1d38d9aff2abdfe07c5ac3575afac732
+[ft/contact-page d4eaab3] team page is created
+ Date: Tue May 23 15:10:05 2023 +0200
+ 1 file changed, 40 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\gentil\gym-git-exercise> git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+PS C:\Users\gentil\gym-git-exercise>   git push --set-upstream origin ft/contact-page        
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (3/3), done.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+PS C:\Users\gentil\gym-git-exercise> git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+PS C:\Users\gentil\gym-git-exercise> git status
+On branch ft/faq-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   faq.html
+
+PS C:\Users\gentil\gym-git-exercise> git commit -a -m "faq page is created"
+[ft/faq-page 022d3c8] faq page is created
+ 1 file changed, 40 insertions(+)
+ create mode 100644 faq.html
+PS C:\Users\gentil\gym-git-exercise>   git push --set-upstream origin ft/faq-page    
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 760 bytes | 95.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+PS C:\Users\gentil\gym-git-exercise> git log
+commit 022d3c804a66437c1e3ec4bebdcbc6bee61bb73a (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: ishimwe-gentil <igentilherve@gmail.com>
+Date:   Tue May 23 15:29:42 2023 +0200
+
+    faq page is created
+
+commit d4eaab32e47c2681309e4f51d69c3572184c4ee6 (origin/ft/contact-page, ft/contact-page)
+Author: ishimwe-gentil <igentilherve@gmail.com>
+Date:   Tue May 23 15:10:05 2023 +0200
+
+    team page is created
+
+commit 13d76f3a979ce1b8dc23e45ff1f661eb42dc927f (origin/main, main)
+PS C:\Users\gentil\gym-git-exercise>     
+```
