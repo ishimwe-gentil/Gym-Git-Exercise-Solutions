@@ -383,3 +383,97 @@ PS C:\Users\gentil\gym-git-exercise> git push
 Everything up-to-date
 PS C:\Users\gentil\gym-git-exercise> 
 ```
+
+### Exercise 2
+
+```powershell
+PS C:\Users\gentil\gym-git-exercise> git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+PS C:\Users\gentil\gym-git-exercise> git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        footer.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\gentil\gym-git-exercise> git add footer.html
+PS C:\Users\gentil\gym-git-exercise> git commit -a -m "footer page is created"
+ create mode 100644 footer.html
+PS C:\Users\gentil\gym-git-exercise> git status
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   footer.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\gentil\gym-git-exercise> git add footer.html
+PS C:\Users\gentil\gym-git-exercise> git commit -a -m "footer page attribute changed"
+[ft/footer 0efe55b] footer page attribute changed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\gentil\gym-git-exercise> git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Writing objects: 100% (6/6), 1.08 KiB | 220.00 KiB/s, done.
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote:      https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+To https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+PS C:\Users\gentil\gym-git-exercise> git push
+Everything up-to-date
+PS C:\Users\gentil\gym-git-exercise> git checkout main
+Your branch is up to date with 'origin/main'.
+PS C:\Users\gentil\gym-git-exercise> git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+PS C:\Users\gentil\gym-git-exercise> git merge --squash ft/footer
+Updating 8ff8a91..0efe55b
+Squash commit -- not updating HEAD
+ footer.html | 43 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 43 insertions(+)
+PS C:\Users\gentil\gym-git-exercise> git status
+On branch ft/squashing
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+PS C:\Users\gentil\gym-git-exercise> git commit -a -m "footer changes squashing"
+[ft/squashing df155d8] footer changes squashing
+ 1 file changed, 43 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\gentil\gym-git-exercise> git checkout ft/footer   
+Switched to branch 'ft/footer'
+Your branch is up to date with 'origin/ft/footer'.
+PS C:\Users\gentil\gym-git-exercise> git log
+Author: ishimwe-gentil <igentilherve@gmail.com>
+
+    footer page attribute changed
+
+commit b5cde97b4e812f88199288108d5144ac2d1079e2
+Author: ishimwe-gentil <igentilherve@gmail.com>
+Date:   Wed May 24 14:33:17 2023 +0200
+    footer page is created
+Switched to branch 'ft/squashing'
+PS C:\Users\gentil\gym-git-exercise> git --set-upstream origin ft/squashing
+unknown option: --set-upstream
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+PS C:\Users\gentil\gym-git-exercise> git push --set-upstream origin ft/squashing
+fatal: unable to access 'https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions.git/': Could not resolve host: github.com
+PS C:\Users\gentil\gym-git-exercise> git push origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 794 bytes | 397.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+PS C:\Users\gentil\gym-git-exercise> 
+```
