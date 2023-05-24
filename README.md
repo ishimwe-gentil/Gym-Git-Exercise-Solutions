@@ -335,3 +335,51 @@ Date:   Tue May 23 15:10:05 2023 +0200
 commit 13d76f3a979ce1b8dc23e45ff1f661eb42dc927f (origin/main, main)
 PS C:\Users\gentil\gym-git-exercise>     
 ```
+
+## Bundle 4
+
+###Exercise 1
+
+```powershell
+PS C:\Users\gentil\gym-git-exercise> git checkout main
+Switched to branch 'main'
+PS C:\Users\gentil\gym-git-exercise> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\gentil\gym-git-exercise> git commit -a -m "the home page is created again"
+[main 21a246c] the home page is created again
+ 1 file changed, 42 insertions(+)
+ create mode 100644 home.html
+PS C:\Users\gentil\gym-git-exercise> git push --set-upstream main  
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+PS C:\Users\gentil\gym-git-exercise> git push --set-upstream origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 747 bytes | 249.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions.git
+   7011d9a..21a246c  main -> main
+PS C:\Users\gentil\gym-git-exercise> git push git-copy
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (15/15), 3.99 KiB | 1020.00 KiB/s, done.
+Total 15 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/ishimwe-gentil/gym-exercise-clone.git
+ * [new branch]      main -> main
+PS C:\Users\gentil\gym-git-exercise> git push
+Everything up-to-date
+PS C:\Users\gentil\gym-git-exercise> 
+```
