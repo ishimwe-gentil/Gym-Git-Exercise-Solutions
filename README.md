@@ -477,3 +477,113 @@ To https://github.com/ishimwe-gentil/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/squashing -> ft/squashing
 PS C:\Users\gentil\gym-git-exercise> 
 ```
+
+### Bundle 5-6
+
+## Exercises 
+
+```powershell
+PS C:\Users\gentil\git-cafe-exercise> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+On branch main
+Your branch is up to date with 'origin/main'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\gentil\git-cafe-exercise> git add index.html
+PS C:\Users\gentil\git-cafe-exercise> git commit -a -m "main title is renamed"
+[main 47a90fc] main title is renamed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Enumerating objects: 5, done.
+Delta compression using up to 4 threads
+Writing objects: 100% (3/3), 321 bytes | 107.00 KiB/s, done.
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ishimwe-gentil/git-cafe-exercise.git
+   d1d3f9c..47a90fc  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\gentil\git-cafe-exercise> git push
+Everything up-to-date
+PS C:\Users\gentil\git-cafe-exercise> git checkout -b ft/new
+Switched to a new branch 'ft/new'
+PS C:\Users\gentil\git-cafe-exercise> git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        menu.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\gentil\git-cafe-exercise> git add menu.html
+PS C:\Users\gentil\git-cafe-exercise> git commit -a -m "Menu page is created"
+[ft/new 0928047] Menu page is created
+ 1 file changed, 180 insertions(+)
+ create mode 100644 menu.html
+PS C:\Users\gentil\git-cafe-exercise> git push --set-upstream origin ft/new
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Writing objects: 100% (3/3), 1.76 KiB | 902.00 KiB/s, done.
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote:      https://github.com/ishimwe-gentil/git-cafe-exercise/pull/new/ft/new
+To https://github.com/ishimwe-gentil/git-cafe-exercise.git
+ * [new branch]      ft/new -> ft/new
+branch 'ft/new' set up to track 'origin/ft/new'.
+PS C:\Users\gentil\git-cafe-exercise> git push
+Everything up-to-date
+PS C:\Users\gentil\git-cafe-exercise> git checkout main
+Switched to branch 'main'
+Switched to a new branch 'ft/bug-fix'
+PS C:\Users\gentil\git-cafe-exercise> git status
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\gentil\git-cafe-exercise> git add index-4.html
+PS C:\Users\gentil\git-cafe-exercise> git commit -a -m "Contact title is changed"
+[ft/bug-fix 27e72c1] Contact title is changed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\gentil\git-cafe-exercise> git push --set-upstream origin ft/bug-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/bug-fix' on GitHub by visiting:
+remote:      https://github.com/ishimwe-gentil/git-cafe-exercise/pull/new/ft/bug-fix
+remote:
+To https://github.com/ishimwe-gentil/git-cafe-exercise.git
+ * [new branch]      ft/bug-fix -> ft/bug-fix
+On branch ft/bug-fix
+Your branch is up to date with 'origin/ft/bug-fix'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\gentil\git-cafe-exercise> git add index-4.html
+PS C:\Users\gentil\git-cafe-exercise> git commit -a -m "Telphone number is changed on the contacts info" 
+[ft/bug-fix 061626a] Telphone number is changed on the contacts info
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ishimwe-gentil/git-cafe-exercise.git
+   27e72c1..061626a  ft/bug-fix -> ft/bug-fix
+branch 'ft/bug-fix' set up to track 'origin/ft/bug-fix'.
+PS C:\Users\gentil\git-cafe-exercise> git push
+Everything up-to-date
+PS C:\Users\gentil\git-cafe-exercise> 
+```
